@@ -1,0 +1,16 @@
+vendor/
+.env
+.idea/
+.vscode/
+.DS_Store
+node_modules/
+public/assets/img/*
+!public/assets/img/.gitkeep
+
+# Tests
+coverage/
+.phpunit.result.cache
+
+# Tests
+coverage/
+.phpunit.result.cache

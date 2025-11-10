@@ -1,0 +1,68 @@
+/* ========== Services Page ========== */
+.services-hero {
+    min-height: 60vh;
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--primary-dark) 100%);
+    padding-top: 100px;
+}
+
+.services-list {
+    padding: var(--spacing-xl) 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 968px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card .card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.service-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.service-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* CTA Section */
+.services-cta {
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.services-cta .btn {
+    margin-top: var(--spacing-md);
+}
