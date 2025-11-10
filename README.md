@@ -1,6 +1,58 @@
-# Portfolio - Site Personnel
+# 🚀 Portfolio - Edem Claude KUMAZA
 
-Projet PHP pour portfolio personnel.
+[![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![Tests](https://img.shields.io/badge/Tests-27%20Passing-success?style=for-the-badge&logo=phpunit&logoColor=white)](https://phpunit.de/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
+
+> Portfolio personnel moderne développé en PHP avec architecture MVC, tests unitaires et design responsive.
+
+**🌐 [Démo Live](https://edemclaude.github.io/claudefolio/)** • **📧 [Contact](mailto:edemclaudek@gmail.com)** • **💼 [LinkedIn](https://linkedin.com)**
+
+---
+
+## 📸 Aperçu
+
+### Page d'accueil
+![Home Page](docs/screenshots/home.png)
+
+### Portfolio & Services
+<p float="left">
+  <img src="docs/screenshots/portfolio.png" width="49%" />
+  <img src="docs/screenshots/services.png" width="49%" />
+</p>
+
+### Responsive Design
+<p float="left">
+  <img src="docs/screenshots/mobile-home.png" width="30%" />
+  <img src="docs/screenshots/mobile-menu.png" width="30%" />
+  <img src="docs/screenshots/mobile-portfolio.png" width="30%" />
+</p>
+
+---
+
+## ✨ Fonctionnalités
+
+### 🏗️ Architecture
+- ✅ **MVC personnalisé** - Architecture propre et maintenable
+- ✅ **Routeur HTTP** - Gestion GET/POST avec dispatch automatique
+- ✅ **Asset Manager** - Chargement dynamique avec cache busting
+- ✅ **Environment Config** - Gestion des variables .env
+
+### 🎨 Design & UX
+- ✅ **Thème moderne** - Dark mode avec accents bleus
+- ✅ **100% Responsive** - Mobile, tablette, desktop
+- ✅ **Animations fluides** - Scroll reveal, typing effect, particules
+- ✅ **Menu hamburger** - Navigation mobile intuitive
+- ✅ **Font Awesome** - Icônes vectorielles professionnelles
+
+### 🧪 Qualité du Code
+- ✅ **27 tests PHPUnit** - Couverture unitaire et fonctionnelle
+- ✅ **PHPDoc complet** - Documentation sur toutes les classes
+- ✅ **PSR-4 Autoloading** - Standards PHP respectés
+- ✅ **CI/CD GitHub Actions** - Tests automatiques à chaque push
+
+---
 
 ## Structure
 
@@ -139,14 +191,87 @@ tests/
 - 📄 **PAGES.md** - Guide de création de nouvelles pages
 - 📄 **VHOST_SETUP.md** - Configuration du virtual host
 
-## TODO
+## 🚀 Déploiement
 
-- [x] Tests unitaires (PHPUnit)
-- [ ] Ajouter une vraie photo de profil
-- [ ] Connecter le formulaire à un service email
-- [ ] Intégrer une base de données
-- [ ] Créer un back-office (admin)
-- [ ] Ajouter un blog
-- [ ] Ajouter plus de projets au portfolio
-- [ ] Système de gestion de contenu
-- [ ] Multilingue (FR/EN)
+### GitHub Pages (Démo Statique)
+
+Le projet inclut une configuration GitHub Actions pour déploiement automatique:
+
+```bash
+# Les workflows sont déjà configurés dans .github/workflows/
+# - tests.yml: Tests automatiques à chaque push
+# - deploy.yml: Déploiement sur GitHub Pages
+```
+
+**Étapes:**
+1. Allez dans **Settings** > **Pages** de votre repo
+2. Source: Sélectionnez `GitHub Actions`
+3. Push sur `main` déclenche automatiquement le déploiement
+
+📖 **[Guide complet GitHub Pages](docs/GITHUB_PAGES.md)**
+
+### Hébergement PHP
+
+Pour la version PHP complète avec backend:
+- **InfinityFree**: https://infinityfree.net/
+- **000webhost**: https://www.000webhost.com/
+- **Railway**: https://railway.app/
+
+## 📸 Screenshots
+
+Pour ajouter des captures d'écran au README:
+
+1. Prenez des screenshots de votre portfolio
+2. Placez-les dans `docs/screenshots/`
+3. Optimisez-les (< 500KB)
+
+📖 **[Guide Screenshots détaillé](docs/SCREENSHOTS.md)**
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues! Voici comment contribuer:
+
+1. **Fork** le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add: Amazing feature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une **Pull Request**
+
+### Commits conventionnels
+
+Utilisez des messages de commit clairs:
+```
+feat: Ajouter nouvelle fonctionnalité
+fix: Corriger un bug
+docs: Mettre à jour la documentation
+style: Améliorer le design
+test: Ajouter des tests
+refactor: Refactoriser le code
+```
+
+## 📄 License
+
+Ce projet est sous license MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+## 👨‍💻 Auteur
+
+**Edem Claude KUMAZA**
+- GitHub: [@edemClaude](https://github.com/edemClaude)
+- Email: edemclaudek@gmail.com
+- LinkedIn: [Votre LinkedIn](https://linkedin.com)
+
+## 🙏 Remerciements
+
+- [Font Awesome](https://fontawesome.com/) - Icônes
+- [PHPUnit](https://phpunit.de/) - Tests
+- [GitHub Actions](https://github.com/features/actions) - CI/CD
+
+---
+
+<p align="center">
+  Fait avec ❤️ par Edem Claude KUMAZA
+</p>
+
+<p align="center">
+  <a href="#-portfolio---edem-claude-kumaza">⬆️ Retour en haut</a>
+</p>
