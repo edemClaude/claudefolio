@@ -1,6 +1,6 @@
 # 🚀 Portfolio - Edem Claude KUMAZA
 
-[![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![PHP Version](https://img.shields.io/badge/PHP-8.1%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 [![Tests](https://img.shields.io/badge/Tests-27%20Passing-success?style=for-the-badge&logo=phpunit&logoColor=white)](https://phpunit.de/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
