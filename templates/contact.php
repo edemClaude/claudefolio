@@ -13,6 +13,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
     <meta name="description" content="Contactez Edem Claude KUMAZA pour vos projets web">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <?= Asset::css(array_merge($cssFiles, ['hamburger.css', 'footer.css'])) ?>
+    <!-- favicon -->
+    <link rel="icon" href="<?= Asset::img('favicon.ico') ?>" type="image/x-icon">
 </head>
 <body>
     <!-- Page Loader -->
@@ -53,17 +55,17 @@ $jsFiles = $jsFiles ?? ['app.js'];
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Email</h4>
-                                    <p>edem.kumaza@example.com</p>
+                                    <p>edemclaudek@gmail.com</p>
                                 </div>
                             </a>
                             
-                            <a href="tel:+33000000000" class="contact-info-item">
+                            <a href="tel:+221778433293" class="contact-info-item">
                                 <div class="contact-icon">
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Téléphone</h4>
-                                    <p>+33 0 00 00 00 00</p>
+                                    <p>+221 77 843 32 93</p>
                                 </div>
                             </a>
                             
@@ -73,7 +75,7 @@ $jsFiles = $jsFiles ?? ['app.js'];
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Localisation</h4>
-                                    <p>Paris, France</p>
+                                    <p>Dakar, Sénégal</p>
                                 </div>
                             </div>
                             
@@ -83,14 +85,14 @@ $jsFiles = $jsFiles ?? ['app.js'];
                                 </div>
                                 <div class="contact-info-text">
                                     <h4>Disponibilité</h4>
-                                    <p>Lun - Ven, 9h - 18h</p>
+                                    <p>Lun - Ven, 8h - 19h</p>
                                 </div>
                             </div>
                         </div>
                         
                         <h4 style="margin-top: var(--spacing-md); margin-bottom: var(--spacing-sm);">Réseaux sociaux</h4>
                         <div class="social-links">
-                            <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+                            <a href="https://github.com/edemclaude" target="_blank" class="social-link" title="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">

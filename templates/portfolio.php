@@ -13,6 +13,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
     <meta name="description" content="Découvrez mes réalisations et projets web">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <?= Asset::css(array_merge($cssFiles, ['hamburger.css', 'footer.css'])) ?>
+    <!-- favicon -->
+    <link rel="icon" href="<?= Asset::img('favicon.ico') ?>" type="image/x-icon">
 </head>
 <body>
     <!-- Page Loader -->
