@@ -1,5 +1,6 @@
 <?php
 use App\Core\Asset;
+use App\Core\Translator;
 $pageTitle = $pageTitle ?? 'À propos';
 $cssFiles = $cssFiles ?? ['style.css'];
 $jsFiles = $jsFiles ?? ['app.js'];
@@ -33,17 +34,19 @@ $jsFiles = $jsFiles ?? ['app.js'];
             <div class="container">
                 <div class="about-hero-content">
                     <div class="about-hero-text fade-in-left">
-                        <p class="subtitle">Développeur Web Passionné</p>
+                        <p class="subtitle"><?= Translator::trans('about.hero.subtitle') ?></p>
                         <h1>Edem Claude KUMAZA</h1>
                         <p class="hero-description">
-                            Je transforme des idées en expériences digitales exceptionnelles. 
-                            Avec une approche centrée sur l'utilisateur et une passion pour le code propre, 
-                            je crée des solutions web modernes et performantes.
+                            <?= Translator::trans('about.hero.description') ?>
                         </p>
                         <div class="hero-buttons" style="margin-top: var(--spacing-md);">
                             <div class="cta-buttons">
-                                <a href="/portfolio" class="btn btn-primary btn-shine">Voir mes réalisations</a>
-                                <a href="/contact" class="btn btn-outline">Me contacter</a>
+                                <a href="/portfolio" class="btn btn-primary btn-shine">
+                                    <?= Translator::trans('about.hero.cta.portfolio') ?>
+                                </a>
+                                <a href="/contact" class="btn btn-outline">
+                                    <?= Translator::trans('about.hero.cta.contact') ?>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -60,24 +63,16 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <section class="about-story">
             <div class="container">
                 <div class="story-content">
-                    <h2 class="section-title">Mon Histoire</h2>
+                    <h2 class="section-title"><?= Translator::trans('about.story.title') ?></h2>
                     <div class="story-text">
                         <p class="fade-in-up delay-1">
-                            Passionné par la technologie depuis mon plus jeune âge, j'ai découvert le développement web 
-                            et ai immédiatement été captivé par la possibilité de créer des expériences interactives 
-                            qui touchent des millions d'utilisateurs à travers le monde.
+                            <?= Translator::trans("about.story.p1") ?>
                         </p>
                         <p class="fade-in-up delay-2">
-                            Au fil des années, j'ai développé une expertise solide en développement full-stack, 
-                            maîtrisant aussi bien les technologies front-end (HTML, CSS, JavaScript, React, Vue.js) 
-                            que back-end (PHP, Node.js, bases de données). Cette polyvalence me permet d'avoir 
-                            une vision globale des projets et de proposer des solutions complètes et optimisées.
+                            <?= Translator::trans("about.story.p2") ?>
                         </p>
                         <p class="fade-in-up delay-3">
-                            Mon approche se concentre sur la création d'applications performantes, accessibles 
-                            et maintenables. Je crois fermement que la qualité du code et l'expérience utilisateur 
-                            sont les piliers d'un projet web réussi. Chaque ligne de code que j'écris est pensée 
-                            pour être claire, efficace et évolutive.
+                            <?= Translator::trans("about.story.p3") ?>
                         </p>
                     </div>
                 </div>
@@ -87,23 +82,23 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- Stats Section -->
         <section class="about-stats">
             <div class="container">
-                <h2 class="section-title">En Quelques Chiffres</h2>
+                <h2 class="section-title"><?= Translator::trans('about.stats.title') ?></h2>
                 <div class="stats-grid">
                     <div class="stat-card card fade-in-up delay-1">
                         <span class="stat-number counter" data-target="50">0</span>
-                        <span class="stat-label">Projets Réalisés</span>
+                        <span class="stat-label"><?= Translator::trans('about.stats.projects') ?></span>
                     </div>
                     <div class="stat-card card fade-in-up delay-2">
                         <span class="stat-number counter" data-target="5">0</span>
-                        <span class="stat-label">Années d'Expérience</span>
+                        <span class="stat-label"><?= Translator::trans('about.stats.years') ?></span>
                     </div>
                     <div class="stat-card card fade-in-up delay-3">
                         <span class="stat-number counter" data-target="30">0</span>
-                        <span class="stat-label">Clients Satisfaits</span>
+                        <span class="stat-label"><?= Translator::trans('about.stats.clients') ?></span>
                     </div>
                     <div class="stat-card card fade-in-up delay-4">
                         <span class="stat-number counter" data-target="100">0</span>
-                        <span class="stat-label">% Satisfaction</span>
+                        <span class="stat-label"><?= Translator::trans('about.stats.satisfaction') ?></span>
                     </div>
                 </div>
             </div>
@@ -112,35 +107,35 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- Values Section -->
         <section class="about-values">
             <div class="container">
-                <h2 class="section-title">Mes Valeurs</h2>
+                <h2 class="section-title"><?= Translator::trans('about.values.title') ?></h2>
                 <div class="values-grid">
                     <div class="card value-card fade-in-up delay-1">
                         <div class="value-icon">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3>Innovation</h3>
-                        <p>Toujours à l'affût des dernières technologies pour proposer des solutions modernes et performantes</p>
+                        <h3><?= Translator::trans('about.values.innovation.title') ?></h3>
+                        <p><?= Translator::trans('about.values.innovation.text') ?></p>
                     </div>
                     <div class="card value-card fade-in-up delay-2">
                         <div class="value-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <h3>Qualité</h3>
-                        <p>Code propre, maintenable et testé. La qualité n'est pas négociable</p>
+                        <h3><?= Translator::trans('about.values.quality.title') ?></h3>
+                        <p><?= Translator::trans('about.values.quality.text') ?></p>
                     </div>
                     <div class="card value-card fade-in-up delay-3">
                         <div class="value-icon">
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h3>Collaboration</h3>
-                        <p>Travail d'équipe et communication transparente pour des projets réussis</p>
+                        <h3><?= Translator::trans('about.values.collaboration.title') ?></h3>
+                        <p><?= Translator::trans('about.values.collaboration.text') ?></p>
                     </div>
                     <div class="card value-card fade-in-up delay-4">
                         <div class="value-icon">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        <h3>Apprentissage</h3>
-                        <p>Formation continue et veille technologique constante pour rester à la pointe</p>
+                        <h3><?= Translator::trans('about.values.learning.title') ?></h3>
+                        <p><?= Translator::trans('about.values.learning.text') ?></p>
                     </div>
                 </div>
             </div>
@@ -149,42 +144,42 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- Timeline Section -->
         <section class="about-timeline">
             <div class="container">
-                <h2 class="section-title">Mon Parcours</h2>
+                <h2 class="section-title"><?= Translator::trans('about.timeline.title') ?></h2>
                 <div class="timeline">
                     <div class="timeline-item fade-in-up delay-1">
                         <div class="timeline-content">
-                            <h3>Développeur Full Stack Senior</h3>
-                            <h4>Freelance</h4>
-                            <p>Accompagnement de clients sur des projets web variés, du site vitrine à l'application métier complexe</p>
+                            <h3><?= Translator::trans('about.timeline.1.title') ?></h3>
+                            <h4><?= Translator::trans('about.timeline.1.company') ?></h4>
+                            <p><?= Translator::trans('about.timeline.1.text') ?></p>
                         </div>
-                        <div class="timeline-year">2023</div>
+                        <div class="timeline-year"><?= Translator::trans('about.timeline.1.year') ?></div>
                     </div>
 
                     <div class="timeline-item fade-in-up delay-2">
                         <div class="timeline-content">
-                            <h3>Lead Developer</h3>
-                            <h4>Tech Company</h4>
-                            <p>Direction technique d'une équipe de 5 développeurs, architecture de solutions scalables</p>
+                            <h3><?= Translator::trans('about.timeline.2.title') ?></h3>
+                            <h4><?= Translator::trans('about.timeline.2.company') ?></h4>
+                            <p><?= Translator::trans('about.timeline.2.text') ?></p>
                         </div>
-                        <div class="timeline-year">2021</div>
+                        <div class="timeline-year"><?= Translator::trans('about.timeline.2.year') ?></div>
                     </div>
 
                     <div class="timeline-item fade-in-up delay-3">
                         <div class="timeline-content">
-                            <h3>Développeur Full Stack</h3>
-                            <h4>Digital Agency</h4>
-                            <p>Développement de sites web et applications pour des clients variés (PME, startups)</p>
+                            <h3><?= Translator::trans('about.timeline.3.title') ?></h3>
+                            <h4><?= Translator::trans('about.timeline.3.company') ?></h4>
+                            <p><?= Translator::trans('about.timeline.3.text') ?></p>
                         </div>
-                        <div class="timeline-year">2019</div>
+                        <div class="timeline-year"><?= Translator::trans('about.timeline.3.year') ?></div>
                     </div>
 
                     <div class="timeline-item fade-in-up delay-4">
                         <div class="timeline-content">
-                            <h3>Développeur Junior</h3>
-                            <h4>Première Expérience</h4>
-                            <p>Apprentissage des fondamentaux et premiers projets professionnels</p>
+                            <h3><?= Translator::trans('about.timeline.4.title') ?></h3>
+                            <h4><?= Translator::trans('about.timeline.4.company') ?></h4>
+                            <p><?= Translator::trans('about.timeline.4.text') ?></p>
                         </div>
-                        <div class="timeline-year">2018</div>
+                        <div class="timeline-year"><?= Translator::trans('about.timeline.4.year') ?></div>
                     </div>
                 </div>
             </div>
@@ -193,11 +188,15 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- CTA Section -->
         <section class="about-cta">
             <div class="container">
-                <h2 class="section-title">Travaillons Ensemble</h2>
-                <p class="hero-description">Vous avez un projet en tête ? Discutons-en !</p>
+                <h2 class="section-title"><?= Translator::trans('about.cta.title') ?></h2>
+                <p class="hero-description"><?= Translator::trans('about.cta.text') ?></p>
                 <div class="cta-buttons">
-                    <a href="/contact" class="btn btn-primary btn-shine">Me contacter</a>
-                    <a href="/services" class="btn btn-outline">Voir mes services</a>
+                    <a href="/contact" class="btn btn-primary btn-shine">
+                        <?= Translator::trans('about.cta.contact') ?>
+                    </a>
+                    <a href="/services" class="btn btn-outline">
+                        <?= Translator::trans('about.cta.services') ?>
+                    </a>
                 </div>
             </div>
         </section>

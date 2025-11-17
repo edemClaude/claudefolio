@@ -45,6 +45,7 @@
 - ✅ **Animations fluides** - Scroll reveal, typing effect, particules
 - ✅ **Menu hamburger** - Navigation mobile intuitive
 - ✅ **Font Awesome** - Icônes vectorielles professionnelles
+- ✅ **Pages bilingues FR/EN** - Navigation, sections principales et contenus clés traduits
 
 ### 🧪 Qualité du Code
 - ✅ **27 tests PHPUnit** - Couverture unitaire et fonctionnelle
@@ -143,6 +144,13 @@ edemclaude/
 - ✅ Soumission AJAX
 - ✅ Messages succès/erreur
 - ✅ Design moderne
+ - ✅ Protection CSRF (token de session) et validation backend
+ - ✅ Envoi d'email configuré via `CONTACT_EMAIL` (désactivé en environnement de tests)
+
+### Internationalisation (i18n)
+- ✅ Système de traduction simple basé sur `src/Core/Translator.php`
+- ✅ Textes centralisés dans `config/translations.php`
+- ✅ Sélecteur de langue FR/EN dans le header (persistant via session)
 
 ## Tests
 

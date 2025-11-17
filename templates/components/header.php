@@ -11,6 +11,7 @@
  */
 
 use App\Core\Asset;
+use App\Core\Translator;
 
 // Détection du chemin actuel pour le highlighting des liens
 $currentPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
@@ -44,11 +45,16 @@ if (!function_exists('isActive')) {
         </button>
         
         <ul class="nav-links">
-            <li><a href="/" <?= isActive('/', $currentPath) ?>>Accueil</a></li>
-            <li><a href="/about" <?= isActive('/about', $currentPath) ?>>À propos</a></li>
-            <li><a href="/services" <?= isActive('/services', $currentPath) ?>>Services</a></li>
-            <li><a href="/portfolio" <?= isActive('/portfolio', $currentPath) ?>>Portfolio</a></li>
-            <li><a href="/contact" <?= isActive('/contact', $currentPath) ?>>Contact</a></li>
+            <li><a href="/" <?= isActive('/', $currentPath) ?>><?= Translator::trans('nav.home') ?></a></li>
+            <li><a href="/about" <?= isActive('/about', $currentPath) ?>><?= Translator::trans('nav.about') ?></a></li>
+            <li><a href="/services" <?= isActive('/services', $currentPath) ?>><?= Translator::trans('nav.services') ?></a></li>
+            <li><a href="/portfolio" <?= isActive('/portfolio', $currentPath) ?>><?= Translator::trans('nav.portfolio') ?></a></li>
+            <li><a href="/contact" <?= isActive('/contact', $currentPath) ?>><?= Translator::trans('nav.contact') ?></a></li>
+            <li class="nav-lang-switch">
+                <a href="<?= $currentPath ?>?lang=fr" <?= Translator::getLocale() === 'fr' ? 'class="active"' : '' ?>>FR</a>
+                |
+                <a href="<?= $currentPath ?>?lang=en" <?= Translator::getLocale() === 'en' ? 'class="active"' : '' ?>>EN</a>
+            </li>
         </ul>
     </nav>
     <div class="nav-overlay"></div>

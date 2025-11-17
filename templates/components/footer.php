@@ -1,3 +1,6 @@
+<?php
+use App\Core\Translator;
+?>
 <footer>
     <div class="container">
         <div class="footer-content">
@@ -28,11 +31,11 @@
             <div class="footer-section">
                 <h3>Liens rapides</h3>
                 <ul class="footer-links">
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/about">À propos</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/"><?= Translator::trans('nav.home') ?></a></li>
+                    <li><a href="/about"><?= Translator::trans('nav.about') ?></a></li>
+                    <li><a href="/services"><?= Translator::trans('nav.services') ?></a></li>
+                    <li><a href="/portfolio"><?= Translator::trans('nav.portfolio') ?></a></li>
+                    <li><a href="/contact"><?= Translator::trans('nav.contact') ?></a></li>
                 </ul>
             </div>
             

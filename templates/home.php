@@ -1,5 +1,6 @@
 <?php
 use App\Core\Asset;
+use App\Core\Translator;
 $pageTitle = $pageTitle ?? 'Portfolio';
 $cssFiles = $cssFiles ?? ['style.css'];
 $jsFiles = $jsFiles ?? ['app.js'];
@@ -30,15 +31,21 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <p class="hero-subtitle fade-in-down delay-1">Bienvenue sur mon portfolio</p>
+                <p class="hero-subtitle fade-in-down delay-1">
+                    <?= Translator::trans('hero.welcome') ?>
+                </p>
                 <h1 class="hero-title fade-in-up delay-2" data-text="Edem Claude KUMAZA">Edem Claude KUMAZA</h1>
                 <p class="hero-description fade-in-up delay-3">
                     <span class="typing-effect">Web Developer</span> 
-                    <br>passionné par la création d'expériences digitales modernes et performantes
+                    <br><?= Translator::trans('hero.description') ?>
                 </p>
                 <div class="hero-buttons fade-in-up delay-4">
-                    <a href="#contact" class="btn btn-primary btn-shine">Me contacter</a>
-                    <a href="#about" class="btn btn-outline wave-effect">En savoir plus</a>
+                    <a href="#contact" class="btn btn-primary btn-shine">
+                        <?= Translator::trans('hero.cta.contact') ?>
+                    </a>
+                    <a href="#about" class="btn btn-outline wave-effect">
+                        <?= Translator::trans('hero.cta.more') ?>
+                    </a>
                 </div>
             </div>
         </section>
@@ -46,22 +53,13 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title">À propos de moi</h2>
+                <h2 class="section-title"><?= Translator::trans('about.title') ?></h2>
                 <div class="about-content">
                     <div class="about-text fade-in-left">
-                        <h3>Développeur Web Full Stack</h3>
-                        <p>
-                            Passionné par le développement web, je crée des applications modernes, 
-                            performantes et intuitives qui répondent aux besoins des utilisateurs.
-                        </p>
-                        <p>
-                            Avec une expertise en front-end et back-end, je transforme vos idées 
-                            en solutions digitales concrètes et innovantes.
-                        </p>
-                        <p>
-                            Mon objectif est de concevoir des expériences utilisateur exceptionnelles 
-                            tout en maintenant un code propre, maintenable et évolutif.
-                        </p>
+                        <h3><?= Translator::trans('about.content.1') ?></h3> <br>
+                        <p><?= Translator::trans('about.content.2') ?></p>
+                        <p><?= Translator::trans('about.content.3') ?></p>
+                        <p><?= Translator::trans('about.content.4') ?></p>
                     </div>
                     <div class="about-image fade-in-right">
                         <div class="about-placeholder scale-in">
@@ -75,7 +73,7 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- Skills Section -->
         <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">Mes Compétences</h2>
+                <h2 class="section-title"><?= Translator::trans('skills.title') ?></h2>
                 <div class="skills-grid">
                     <div class="card skill-card fade-in-up delay-1">
                         <div class="skill-icon">
@@ -125,8 +123,10 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <section id="contact" class="contact">
             <div class="container">
                 <div class="contact-content">
-                    <h2 class="section-title">Contactez-moi</h2>
-                    <p style="margin-bottom: 20px;">Vous avez un projet en tête ? N'hésitez pas à me contacter !</p>
+                    <h2 class="section-title"><?= Translator::trans('home.contact.title') ?></h2>
+                    <p style="margin-bottom: 20px;">
+                        <?= Translator::trans('home.contact.subtitle') ?>
+                    </p>
                     <div class="contact-items">
 
                         <a href="mailto:edemclaudek@gmail.com" class="contact-item" style="margin-bottom: 10px;">
@@ -152,11 +152,13 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <section id="newsletter" class="newsletter">
             <div class="container">
                 <div class="newsletter-content">
-                    <h2 class="section-title">Abonnez-vous à ma newsletter</h2>
-                    <p>Recevez les dernières nouvelles et les meilleurs conseils pour votre développement web.</p>
+                    <h2 class="section-title"><?= Translator::trans('newsletter.title') ?></h2>
+                    <p><?= Translator::trans('newsletter.subtitle') ?></p>
                     <form id="newsletterForm" class="newsletter-form">
-                        <input class="newsletter-input" type="email" id="email" name="email" placeholder="Votre adresse e-mail" required>
-                        <button type="submit" class="btn btn-primary btn-shine">S'abonner</button>
+                        <input class="newsletter-input" type="email" id="email" name="email" placeholder="<?= Translator::trans('contact.form.placeholder.email') ?>" required>
+                        <button type="submit" class="btn btn-primary btn-shine">
+                            <?= Translator::trans('newsletter.cta') ?>
+                        </button>
                     </form>
                     <div id="newsletterMessage" class="newsletter-message"></div>
                 </div>

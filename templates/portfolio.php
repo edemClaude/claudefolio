@@ -1,5 +1,6 @@
 <?php
 use App\Core\Asset;
+use App\Core\Translator;
 $pageTitle = $pageTitle ?? 'Portfolio';
 $cssFiles = $cssFiles ?? ['style.css'];
 $jsFiles = $jsFiles ?? ['app.js'];
@@ -32,9 +33,11 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <section class="portfolio-hero">
             <div class="container">
                 <div class="hero-content" style="text-align: center;">
-                    <h1 class="fade-in-up delay-1">Mon Portfolio</h1>
+                    <h1 class="fade-in-up delay-1">
+                        <?= Translator::trans('portfolio.title') ?>
+                    </h1>
                     <p class="hero-description fade-in-up delay-2">
-                        Découvrez une sélection de mes projets et réalisations
+                        <?= Translator::trans('portfolio.subtitle') ?>
                     </p>
                 </div>
             </div>
@@ -45,10 +48,18 @@ $jsFiles = $jsFiles ?? ['app.js'];
             <div class="container">
                 <!-- Filters -->
                 <div class="portfolio-filters">
-                    <button class="filter-btn active" data-filter="all">Tous</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="app">Applications</button>
-                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn active" data-filter="all">
+                        <?= Translator::trans('portfolio.filter.all') ?>
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        <?= Translator::trans('portfolio.filter.web') ?>
+                    </button>
+                    <button class="filter-btn" data-filter="app">
+                        <?= Translator::trans('portfolio.filter.app') ?>
+                    </button>
+                    <button class="filter-btn" data-filter="ecommerce">
+                        <?= Translator::trans('portfolio.filter.ecommerce') ?>
+                    </button>
                 </div>
 
                 <!-- Portfolio Grid -->
@@ -59,8 +70,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <i class="fas fa-globe"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Site Vitrine Entreprise</h3>
-                            <p>Site web moderne et responsive pour une entreprise de services</p>
+                            <h3><?= Translator::trans('portfolio.project.1.title') ?></h3>
+                            <p><?= Translator::trans('portfolio.project.1.text') ?></p>
                             <div class="portfolio-tags">
                                 <span class="portfolio-tag">HTML/CSS</span>
                                 <span class="portfolio-tag">PHP</span>
@@ -76,8 +87,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <i class="fas fa-shopping-cart"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Boutique en Ligne</h3>
-                            <p>Plateforme e-commerce complète avec système de paiement</p>
+                            <h3><?= Translator::trans('portfolio.project.2.title') ?></h3>
+                            <p><?= Translator::trans('portfolio.project.2.text') ?></p>
                             <div class="portfolio-tags">
                                 <span class="portfolio-tag">PHP</span>
                                 <span class="portfolio-tag">MySQL</span>
@@ -93,8 +104,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <i class="fas fa-tasks"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Application de Gestion</h3>
-                            <p>Application web pour la gestion de projets et tâches</p>
+                            <h3><?= Translator::trans('portfolio.project.3.title') ?></h3>
+                            <p><?= Translator::trans('portfolio.project.3.text') ?></p>
                             <div class="portfolio-tags">
                                 <span class="portfolio-tag">React</span>
                                 <span class="portfolio-tag">Node.js</span>
@@ -110,8 +121,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <i class="fas fa-palette"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Portfolio Créatif</h3>
-                            <p>Portfolio interactif pour un designer graphique</p>
+                            <h3><?= Translator::trans('portfolio.project.4.title') ?></h3>
+                            <p><?= Translator::trans('portfolio.project.4.text') ?></p>
                             <div class="portfolio-tags">
                                 <span class="portfolio-tag">Vue.js</span>
                                 <span class="portfolio-tag">GSAP</span>
@@ -127,8 +138,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Dashboard Analytics</h3>
-                            <p>Tableau de bord pour visualiser des données en temps réel</p>
+                            <h3><?= Translator::trans('portfolio.project.5.title') ?></h3>
+                            <p><?= Translator::trans('portfolio.project.5.text') ?></p>
                             <div class="portfolio-tags">
                                 <span class="portfolio-tag">React</span>
                                 <span class="portfolio-tag">Chart.js</span>
@@ -144,8 +155,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <i class="fas fa-blog"></i>
                         </div>
                         <div class="portfolio-content">
-                            <h3>Blog Personnel</h3>
-                            <p>Plateforme de blog avec éditeur markdown et commentaires</p>
+                            <h3><?= Translator::trans('portfolio.project.6.title') ?></h3>
+                            <p><?= Translator::trans('portfolio.project.6.text') ?></p>
                             <div class="portfolio-tags">
                                 <span class="portfolio-tag">PHP</span>
                                 <span class="portfolio-tag">Laravel</span>

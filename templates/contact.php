@@ -1,5 +1,6 @@
  <?php
 use App\Core\Asset;
+use App\Core\Translator;
 $pageTitle = $pageTitle ?? 'Contact';
 $cssFiles = $cssFiles ?? ['style.css'];
 $jsFiles = $jsFiles ?? ['app.js'];
@@ -32,9 +33,11 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <section class="contact-hero">
             <div class="container">
                 <div class="hero-content" style="text-align: center;">
-                    <h1 class="fade-in-up delay-1">Contactez-moi</h1>
+                    <h1 class="fade-in-up delay-1">
+                        <?= Translator::trans('contact.title') ?>
+                    </h1>
                     <p class="hero-description fade-in-up delay-2">
-                        Une question ? Un projet ? N'hésitez pas à me contacter
+                        <?= Translator::trans('contact.subtitle') ?>
                     </p>
                 </div>
             </div>
@@ -46,7 +49,9 @@ $jsFiles = $jsFiles ?? ['app.js'];
                 <div class="contact-wrapper">
                     <!-- Informations de contact -->
                     <div class="contact-info-card card fade-in-left">
-                        <h3 style="margin-bottom: var(--spacing-md);">Informations de contact</h3>
+                        <h3 style="margin-bottom: var(--spacing-md);">
+                            <?= Translator::trans('contact.info.title') ?>
+                        </h3>
                         
                         <div class="contact-info-list">
                             <a href="mailto:edemclaudek@gmail.com" class="contact-info-item">
@@ -106,56 +111,58 @@ $jsFiles = $jsFiles ?? ['app.js'];
                     
                     <!-- Formulaire de contact -->
                     <div class="contact-form fade-in-right">
-                        <h3 style="margin-bottom: var(--spacing-md);">Envoyez-moi un message</h3>
+                        <h3 style="margin-bottom: var(--spacing-md);">
+                            <?= Translator::trans('contact.form.title') ?>
+                        </h3>
                         
                         <div id="formMessage" class="form-message"></div>
                         
                         <form id="contactForm" method="POST">
                             <input type="hidden" name="_csrf_token" value="<?= htmlspecialchars($csrfToken ?? '', ENT_QUOTES, 'UTF-8') ?>">
                             <div class="form-group">
-                                <label for="name">Nom complet *</label>
+                                <label for="name"><?= Translator::trans('contact.form.name') ?></label>
                                 <input 
                                     type="text" 
                                     id="name" 
                                     name="name" 
                                     required 
-                                    placeholder="Votre nom"
+                                    placeholder="<?= Translator::trans('contact.form.placeholder.name') ?>"
                                 >
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email *</label>
+                                <label for="email"><?= Translator::trans('contact.form.email') ?></label>
                                 <input 
                                     type="email" 
                                     id="email" 
                                     name="email" 
                                     required 
-                                    placeholder="votre@email.com"
+                                    placeholder="<?= Translator::trans('contact.form.placeholder.email') ?>"
                                 >
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject">Sujet</label>
+                                <label for="subject"><?= Translator::trans('contact.form.subject') ?></label>
                                 <input 
                                     type="text" 
                                     id="subject" 
                                     name="subject" 
-                                    placeholder="Sujet de votre message"
+                                    placeholder="<?= Translator::trans('contact.form.placeholder.subject') ?>"
                                 >
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Message *</label>
+                                <label for="message"><?= Translator::trans('contact.form.message') ?></label>
                                 <textarea 
                                     id="message" 
                                     name="message" 
                                     required 
-                                    placeholder="Votre message..."
+                                    placeholder="<?= Translator::trans('contact.form.placeholder.message') ?>"
                                 ></textarea>
                             </div>
                             
                             <button type="submit" class="btn btn-primary btn-shine form-submit">
-                                Envoyer le message
+                                <?= Translator::trans('contact.form.submit') ?>
                             </button>
                         </form>
                     </div>

@@ -35,6 +35,16 @@ App\Core\Env::load($root . '/.env');
 // Chargement de la configuration de l'application
 $config = require $root . '/config/app.php';
 
+// ========== LANGUE / TRADUCTION ==========
+// Détermination de la langue courante (fr / en) via paramètre ?lang= et session
+$locale = $_GET['lang'] ?? ($_SESSION['locale'] ?? 'fr');
+if (!in_array($locale, ['fr', 'en'], true)) {
+    $locale = 'fr';
+}
+
+$_SESSION['locale'] = $locale;
+\App\Core\Translator::setLocale($locale);
+
 // ========== ASSETS ==========
 // Initialisation du helper de gestion des assets (CSS/JS)
 App\Core\Asset::setBasePath('');

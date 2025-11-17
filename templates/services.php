@@ -1,5 +1,6 @@
 <?php
 use App\Core\Asset;
+use App\Core\Translator;
 $pageTitle = $pageTitle ?? 'Services';
 $cssFiles = $cssFiles ?? ['style.css'];
 $jsFiles = $jsFiles ?? ['app.js'];
@@ -32,9 +33,11 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <section class="services-hero">
             <div class="container">
                 <div class="hero-content" style="text-align: center;">
-                    <h1 class="fade-in-up delay-1">Mes Services</h1>
+                    <h1 class="fade-in-up delay-1">
+                        <?= Translator::trans('services.title') ?>
+                    </h1>
                     <p class="hero-description fade-in-up delay-2">
-                        Des solutions web sur mesure pour concrétiser vos projets digitaux
+                        <?= Translator::trans('services.subtitle') ?>
                     </p>
                 </div>
             </div>
@@ -48,48 +51,48 @@ $jsFiles = $jsFiles ?? ['app.js'];
                         <div class="card-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h3>Développement Web</h3>
-                        <p>Sites et applications web modernes, performants et sur mesure.</p>
+                        <h3><?= Translator::trans('services.card.1.title') ?></h3>
+                        <p><?= Translator::trans('services.card.1.text') ?></p>
                     </div>
 
                     <div class="card service-card fade-in-up delay-2">
                         <div class="card-icon">
                             <i class="fas fa-palette"></i>
                         </div>
-                        <h3>UI/UX Design</h3>
-                        <p>Interfaces utilisateur intuitives et esthétiques.</p>
+                        <h3><?= Translator::trans('services.card.2.title') ?></h3>
+                        <p><?= Translator::trans('services.card.2.text') ?></p>
                     </div>
 
                     <div class="card service-card fade-in-up delay-3">
                         <div class="card-icon">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <h3>Optimisation</h3>
-                        <p>Performance, SEO et vitesse de chargement optimisés.</p>
+                        <h3><?= Translator::trans('services.card.3.title') ?></h3>
+                        <p><?= Translator::trans('services.card.3.text') ?></p>
                     </div>
 
                     <div class="card service-card fade-in-up delay-4">
                         <div class="card-icon">
                             <i class="fas fa-wrench"></i>
                         </div>
-                        <h3>Maintenance</h3>
-                        <p>Suivi, mises à jour et support technique continu.</p>
+                        <h3><?= Translator::trans('services.card.4.title') ?></h3>
+                        <p><?= Translator::trans('services.card.4.text') ?></p>
                     </div>
 
                     <div class="card service-card fade-in-up delay-5">
                         <div class="card-icon">
                             <i class="fas fa-mobile-alt"></i>
                         </div>
-                        <h3>Mobile</h3>
-                        <p>Applications mobiles et Progressive Web Apps.</p>
+                        <h3><?= Translator::trans('services.card.5.title') ?></h3>
+                        <p><?= Translator::trans('services.card.5.text') ?></p>
                     </div>
 
                     <div class="card service-card fade-in-up delay-6">
                         <div class="card-icon">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3>Formation</h3>
-                        <p>Accompagnement et formation aux technologies web.</p>
+                        <h3><?= Translator::trans('services.card.6.title') ?></h3>
+                        <p><?= Translator::trans('services.card.6.text') ?></p>
                     </div>
                 </div>
             </div>
@@ -98,9 +101,9 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- Process Section -->
         <section class="process-section">
             <div class="container">
-                <h2 class="section-title">Mon Processus de Travail</h2>
+                <h2 class="section-title"><?= Translator::trans('services.process.title') ?></h2>
                 <p style="text-align: center; max-width: 700px; margin: 0 auto var(--spacing-lg);">
-                    Une méthode éprouvée en 5 étapes pour garantir la réussite de votre projet
+                    <?= Translator::trans('services.process.subtitle') ?>
                 </p>
                 
                 <div class="process-timeline">
@@ -110,8 +113,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <div class="step-icon">
                                 <i class="fas fa-comments"></i>
                             </div>
-                            <h3>Analyse & Découverte</h3>
-                            <p>Échange sur vos besoins, objectifs et contraintes. Définition du cahier des charges et étude de faisabilité.</p>
+                            <h3><?= Translator::trans('services.process.step1.title') ?></h3>
+                            <p><?= Translator::trans('services.process.step1.text') ?></p>
                         </div>
                     </div>
 
@@ -121,8 +124,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <div class="step-icon">
                                 <i class="fas fa-pencil-ruler"></i>
                             </div>
-                            <h3>Conception & Design</h3>
-                            <p>Création des maquettes UI/UX, architecture technique et prototype interactif pour validation.</p>
+                            <h3><?= Translator::trans('services.process.step2.title') ?></h3>
+                            <p><?= Translator::trans('services.process.step2.text') ?></p>
                         </div>
                     </div>
 
@@ -132,8 +135,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <div class="step-icon">
                                 <i class="fas fa-laptop-code"></i>
                             </div>
-                            <h3>Développement</h3>
-                            <p>Codage de votre projet avec les meilleures pratiques. Points réguliers et livraisons itératives.</p>
+                            <h3><?= Translator::trans('services.process.step3.title') ?></h3>
+                            <p><?= Translator::trans('services.process.step3.text') ?></p>
                         </div>
                     </div>
 
@@ -143,8 +146,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <div class="step-icon">
                                 <i class="fas fa-check-double"></i>
                             </div>
-                            <h3>Tests & Validation</h3>
-                            <p>Tests complets (fonctionnels, performance, sécurité) et corrections avant mise en ligne.</p>
+                            <h3><?= Translator::trans('services.process.step4.title') ?></h3>
+                            <p><?= Translator::trans('services.process.step4.text') ?></p>
                         </div>
                     </div>
 
@@ -154,8 +157,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
                             <div class="step-icon">
                                 <i class="fas fa-rocket"></i>
                             </div>
-                            <h3>Déploiement & Suivi</h3>
-                            <p>Mise en production, formation et accompagnement. Maintenance et support post-lancement.</p>
+                            <h3><?= Translator::trans('services.process.step5.title') ?></h3>
+                            <p><?= Translator::trans('services.process.step5.text') ?></p>
                         </div>
                     </div>
                 </div>
@@ -165,9 +168,11 @@ $jsFiles = $jsFiles ?? ['app.js'];
         <!-- CTA Section -->
         <section class="services-cta" style="background: var(--bg-main);">
             <div class="container">
-                <h2 class="section-title">Prêt à démarrer votre projet ?</h2>
-                <p>Discutons de vos besoins et trouvons la meilleure solution ensemble.</p>
-                <a href="/contact" class="btn btn-primary btn-shine">Me contacter</a>
+                <h2 class="section-title"><?= Translator::trans('services.cta.title') ?></h2>
+                <p><?= Translator::trans('services.cta.subtitle') ?></p>
+                <a href="/contact" class="btn btn-primary btn-shine">
+                    <?= Translator::trans('services.cta.button') ?>
+                </a>
             </div>
         </section>
     </main>
