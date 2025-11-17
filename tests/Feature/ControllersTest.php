@@ -87,8 +87,16 @@ class ControllersTest extends TestCase
     {
         $controller = new ContactController();
         
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $_SESSION['csrf_token'] = 'test_token';
+
         // Test avec des données vides
-        $_POST = [];
+        $_POST = [
+            '_csrf_token' => 'test_token',
+        ];
         $result = $controller->submit();
         $data = json_decode($result, true);
 
@@ -103,8 +111,15 @@ class ControllersTest extends TestCase
     {
         $controller = new ContactController();
         
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $_SESSION['csrf_token'] = 'test_token';
+
         // Simuler des données POST valides
         $_POST = [
+            '_csrf_token' => 'test_token',
             'name' => 'John Doe',
             'email' => 'john@example.com',
             'subject' => 'Test Subject',
@@ -125,7 +140,14 @@ class ControllersTest extends TestCase
     {
         $controller = new ContactController();
         
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $_SESSION['csrf_token'] = 'test_token';
+
         $_POST = [
+            '_csrf_token' => 'test_token',
             'name' => 'John Doe',
             'email' => 'invalid-email',
             'subject' => 'Test',

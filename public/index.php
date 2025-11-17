@@ -21,6 +21,12 @@ $root = dirname(__DIR__);
 // Chargement automatique des classes via Composer
 require $root . '/vendor/autoload.php';
 
+// ========== SESSION ==========
+// Démarrage de la session pour la gestion des tokens CSRF et autres données utilisateur
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 // ========== ENVIRONNEMENT ==========
 // Chargement des variables d'environnement depuis le fichier .env
 App\Core\Env::load($root . '/.env');

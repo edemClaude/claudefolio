@@ -13,6 +13,8 @@ $jsFiles = $jsFiles ?? ['app.js'];
     <meta name="description" content="Services de développement web proposés par Edem Claude KUMAZA">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <?= Asset::css(array_merge($cssFiles, ['hamburger.css', 'footer.css'])) ?>
+    <!-- favicon -->
+    <link rel="icon" href="<?= Asset::img('favicon.ico') ?>" type="image/x-icon">
 </head>
 <body>
     <!-- Page Loader -->
@@ -161,7 +163,7 @@ $jsFiles = $jsFiles ?? ['app.js'];
         </section>
 
         <!-- CTA Section -->
-        <section class="services-cta">
+        <section class="services-cta" style="background: var(--bg-main);">
             <div class="container">
                 <h2 class="section-title">Prêt à démarrer votre projet ?</h2>
                 <p>Discutons de vos besoins et trouvons la meilleure solution ensemble.</p>

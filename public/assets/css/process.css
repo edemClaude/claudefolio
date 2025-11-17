@@ -1,6 +1,6 @@
 /* ========== Process Section ========== */
 .process-section {
-    background: var(--bg-main);
+    background: var(--bg-secondary);
     padding: var(--spacing-xl) 0;
 }
 

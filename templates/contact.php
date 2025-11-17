@@ -49,7 +49,7 @@ $jsFiles = $jsFiles ?? ['app.js'];
                         <h3 style="margin-bottom: var(--spacing-md);">Informations de contact</h3>
                         
                         <div class="contact-info-list">
-                            <a href="mailto:edem.kumaza@example.com" class="contact-info-item">
+                            <a href="mailto:edemclaudek@gmail.com" class="contact-info-item">
                                 <div class="contact-icon">
                                     <i class="fas fa-envelope"></i>
                                 </div>
@@ -111,6 +111,7 @@ $jsFiles = $jsFiles ?? ['app.js'];
                         <div id="formMessage" class="form-message"></div>
                         
                         <form id="contactForm" method="POST">
+                            <input type="hidden" name="_csrf_token" value="<?= htmlspecialchars($csrfToken ?? '', ENT_QUOTES, 'UTF-8') ?>">
                             <div class="form-group">
                                 <label for="name">Nom complet *</label>
                                 <input 
